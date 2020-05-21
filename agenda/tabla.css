@@ -1,0 +1,52 @@
+/* typography */
+
+html {
+  font-family: "Segoe UI";
+}
+
+table {
+  table-layout: fixed;
+  width: 60%;
+  border-collapse: collapse;
+  border: 2px solid blue;
+  
+}
+thead th, tfoot th {
+  font-family: "Segoe UI";
+}
+
+th {
+
+  margin-bottom: 1rem;
+  font-family: "Segoe UI";
+  font-size: x-large;
+  letter-spacing: 5px;
+}
+
+td {
+
+  letter-spacing: 5px;
+}
+
+tbody td {
+  text-align: center;
+}
+
+tfoot th {
+  text-align: right;
+}
+
+a:link, a:visited {
+  color: white;
+  background-color:#3498db;
+  text-decoration: none;
+  padding: 14px 25px;
+  text-align: center;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  color: black;
+  background-color:white
+}
+
