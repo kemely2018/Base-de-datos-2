@@ -15,10 +15,9 @@
 			  $resultado=$conexion->query($query);
 			  $row=$resultado->fetch_assoc();
 			?>
-		<form action="modificar_proceso_email.php?ide=<?php echo $row['ide']; ?>" method="POST">
-            <p>E-mail: <input type="email" required name="email"  placeholder="Email..." size="40" value="<?php echo $row['email']; ?>"></p>
-			<p>Tipo: <input type="text" required name="tipoe" placeholder="Tipo de email..." 
-				size="40" value="<?php echo $row['tipoe']; ?>"></p>
+		<form action="modificar_proceso_email.php?ide=<?php echo $row['ide']; ?>&ema=<?php echo $row['email']; ?>" method="POST">
+            <p>E-mail: <input type="email" required name="email"   size="40" value="<?php echo $row['email']; ?>"></p>
+			<p>Tipo: <input type="text" required name="tipoe" size="40" value="<?php echo $row['tipoe']; ?>"></p>
 			<p>
 				<input type="submit" value="Enviar">
 				<input type="reset" value="Borrar">

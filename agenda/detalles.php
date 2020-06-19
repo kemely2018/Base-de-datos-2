@@ -38,37 +38,42 @@
             <p> <?php echo $fila['telefono']; ?>&nbsp &nbsp <?php echo $fila['tipot']; ?></p>      
   
             <a href="modificar_tele.php?id=<?php echo $fila['idt']; ?>">Modificar</a><br/><br/>
+
            
             <?php   
                 
                }
 
+             echo  $id;
+
             ?>
 
 
+
+             <a href="formu_insertar_telefono.php?idt=<?php echo $id ?>">Agregar</a><br/><br/>
             
             <p>E-mail✉ :<br></p>
 
             <?php
 
-              $query3="SELECT email,tipoe from email
+              $query3="SELECT ide,email,tipoe from email
                        WHERE ide ='$id'";
               
               $consulta2= $conexion->query($query3);
               while($filas=$consulta2->fetch_assoc()){
            
 
-			 ?>
+			       ?>
 
-			 <p> <?php echo $filas['email']; ?>&nbsp &nbsp <?php echo $filas['tipoe']; ?></p>
+			       <p> <?php echo $filas['email']; ?>&nbsp &nbsp <?php echo $filas['tipoe']; ?></p>
 		
-             <a href="modificar_email.php?ide=<?php echo $filas['ide']; ?>">Modificar</a><br/><br/>
+             <a href="modificar_email.php?id=<?php echo $filas['ide']; ?>">Modificar</a><br/><br/>
       
-			 <?php
-			   }
-			 ?>
+			       <?php
+			         }
+			       ?>
 		     
-            
+             <a href="formu_insertar_email.php?ide=<?php echo $id ?>">Agregar</a><br/><br/>
 			
 	
             </div>
